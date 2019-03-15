@@ -25,6 +25,14 @@
 		F22D8A8A223BF6D000DE46F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A89223BF6CF00DE46F1 /* AppDelegate.swift */; };
 		F22D8A8C223BF71D00DE46F1 /* RootNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A8B223BF71D00DE46F1 /* RootNavVC.swift */; };
 		F22D8A8E223BF77E00DE46F1 /* CountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A8D223BF77E00DE46F1 /* CountryVC.swift */; };
+		F22D8A90223C0BC500DE46F1 /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A8F223C0BC500DE46F1 /* ScaledHeightImageView.swift */; };
+		F22D8A92223C0BD800DE46F1 /* CollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A91223C0BD800DE46F1 /* CollectionView+Extension.swift */; };
+		F22D8A94223C0BE100DE46F1 /* AlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A93223C0BE100DE46F1 /* AlertViewControllerExtension.swift */; };
+		F22D8A96223C0BEE00DE46F1 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A95223C0BEE00DE46F1 /* ViewControllerExtension.swift */; };
+		F27AF8BC223C1149000AA859 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8BB223C1149000AA859 /* CustomFlowLayout.swift */; };
+		F27AF8C0223C11C7000AA859 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8BD223C11C7000AA859 /* Constants.swift */; };
+		F27AF8C1223C11C7000AA859 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8BE223C11C7000AA859 /* ColorManager.swift */; };
+		F27AF8C2223C11C7000AA859 /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8BF223C11C7000AA859 /* Globel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +82,14 @@
 		F22D8A89223BF6CF00DE46F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F22D8A8B223BF71D00DE46F1 /* RootNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavVC.swift; sourceTree = "<group>"; };
 		F22D8A8D223BF77E00DE46F1 /* CountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryVC.swift; sourceTree = "<group>"; };
+		F22D8A8F223C0BC500DE46F1 /* ScaledHeightImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageView.swift; sourceTree = "<group>"; };
+		F22D8A91223C0BD800DE46F1 /* CollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionView+Extension.swift"; sourceTree = "<group>"; };
+		F22D8A93223C0BE100DE46F1 /* AlertViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerExtension.swift; sourceTree = "<group>"; };
+		F22D8A95223C0BEE00DE46F1 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		F27AF8BB223C1149000AA859 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		F27AF8BD223C11C7000AA859 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F27AF8BE223C11C7000AA859 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		F27AF8BF223C11C7000AA859 /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
 		F335DA6A9B38FCC0F21DA4FB /* Pods-ViperPocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperPocTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperPocTests/Pods-ViperPocTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,6 +271,7 @@
 		F22D8A65223BEC6900DE46F1 /* SubClass */ = {
 			isa = PBXGroup;
 			children = (
+				F22D8A8F223C0BC500DE46F1 /* ScaledHeightImageView.swift */,
 			);
 			path = SubClass;
 			sourceTree = "<group>";
@@ -272,6 +289,7 @@
 		F22D8A67223BEC6900DE46F1 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				F22D8A91223C0BD800DE46F1 /* CollectionView+Extension.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -279,6 +297,7 @@
 		F22D8A68223BEC6900DE46F1 /* AlertViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F22D8A93223C0BE100DE46F1 /* AlertViewControllerExtension.swift */,
 			);
 			path = AlertViewController;
 			sourceTree = "<group>";
@@ -286,6 +305,7 @@
 		F22D8A69223BEC6900DE46F1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F22D8A95223C0BEE00DE46F1 /* ViewControllerExtension.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -347,6 +367,7 @@
 		F22D8A74223BEC6A00DE46F1 /* CustomLayout */ = {
 			isa = PBXGroup;
 			children = (
+				F27AF8BB223C1149000AA859 /* CustomFlowLayout.swift */,
 			);
 			path = CustomLayout;
 			sourceTree = "<group>";
@@ -362,6 +383,9 @@
 		F22D8A77223BEC6A00DE46F1 /* Globel */ = {
 			isa = PBXGroup;
 			children = (
+				F27AF8BE223C11C7000AA859 /* ColorManager.swift */,
+				F27AF8BD223C11C7000AA859 /* Constants.swift */,
+				F27AF8BF223C11C7000AA859 /* Globel.swift */,
 			);
 			path = Globel;
 			sourceTree = "<group>";
@@ -603,14 +627,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22D8A96223C0BEE00DE46F1 /* ViewControllerExtension.swift in Sources */,
 				F22D8A8E223BF77E00DE46F1 /* CountryVC.swift in Sources */,
+				F22D8A94223C0BE100DE46F1 /* AlertViewControllerExtension.swift in Sources */,
+				F22D8A90223C0BC500DE46F1 /* ScaledHeightImageView.swift in Sources */,
 				F22D8A85223BF4F100DE46F1 /* PostServicePath.swift in Sources */,
+				F27AF8C0223C11C7000AA859 /* Constants.swift in Sources */,
 				F22D8A87223BF4F100DE46F1 /* APIEndPoint.swift in Sources */,
+				F27AF8C1223C11C7000AA859 /* ColorManager.swift in Sources */,
+				F27AF8BC223C1149000AA859 /* CustomFlowLayout.swift in Sources */,
 				F22D8A83223BF4EF00DE46F1 /* APIResponse.swift in Sources */,
 				F22D8A86223BF4F100DE46F1 /* APIRequest.swift in Sources */,
 				F22D8A8C223BF71D00DE46F1 /* RootNavVC.swift in Sources */,
 				F22D8A8A223BF6D000DE46F1 /* AppDelegate.swift in Sources */,
 				F22D8A84223BF4F100DE46F1 /* MockServices.swift in Sources */,
+				F22D8A92223C0BD800DE46F1 /* CollectionView+Extension.swift in Sources */,
+				F27AF8C2223C11C7000AA859 /* Globel.swift in Sources */,
 				F22D8A88223BF4F100DE46F1 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
