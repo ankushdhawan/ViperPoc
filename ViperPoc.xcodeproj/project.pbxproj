@@ -868,6 +868,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DEF2C8ECB0C211B9C58E371 /* Pods-ViperPoc.debug.xcconfig */;
 			buildSettings = {
+				APP_ENV = Debug;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -888,6 +889,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CA77A73815CF7033A13E3E7 /* Pods-ViperPoc.release.xcconfig */;
 			buildSettings = {
+				APP_ENV = Release;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

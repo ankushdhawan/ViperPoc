@@ -16,6 +16,9 @@ protocol GenericProtocol {
     var alertMessage: String {get set}
 }
 
+protocol CountryInfoProtocol {
+    func didSelectRowAtIndexPath(index:IndexPath)
+}
 class CountryInfoPresenter : GenericProtocol{
     
     private let interector:CountryInfoInterector
@@ -66,4 +69,14 @@ class CountryInfoPresenter : GenericProtocol{
         }
         
     }
+}
+
+extension CountryInfoPresenter:CountryInfoProtocol
+{
+    func didSelectRowAtIndexPath(index: IndexPath) {
+        
+        router.navigateCountryDetailVC(cat:countryInfo!.rows[index.row] )
+    }
+    
+    
 }

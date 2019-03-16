@@ -174,5 +174,8 @@ extension CountryVC:UICollectionViewDelegate,CustomLayoutDelegate
         }
         return CGSize(width: Constants.kScreenWidth, height: 40).height
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        countryInfoPresentor?.didSelectRowAtIndexPath(index:indexPath)
+    }
 
 }

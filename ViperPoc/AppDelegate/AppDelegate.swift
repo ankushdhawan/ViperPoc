@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         let rootNavVC = RootNavVC()
         window?.rootViewController = rootNavVC
-        
+        print(Bundle.main.infoDictionary?["APP_ENV"])
         return true
     }
     
