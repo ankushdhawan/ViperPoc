@@ -11,6 +11,10 @@ protocol APIClient {
 
 class APIService:APIClient {
     
+    init() {
+        
+    }
+    
     typealias JSONTaskCompletionHandler = (Codable?, APIError?) -> Void
     
     private func decodingTask<T: Codable>(with requestEnvelop: JCAPIResource, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler)  {

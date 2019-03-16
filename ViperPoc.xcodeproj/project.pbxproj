@@ -10,10 +10,8 @@
 		2677F5799320EB57B83A4FC6 /* Pods_ViperPocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE60FC8D698F09803B315C /* Pods_ViperPocTests.framework */; };
 		D8524455EC8CDD07F3773BD2 /* Pods_ViperPocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7C15539FAB492E76F03D7D /* Pods_ViperPocUITests.framework */; };
 		E9C2DCEF00D6F9310EBBA589 /* Pods_ViperPoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464A8E2E248DC08D5A7E8A18 /* Pods_ViperPoc.framework */; };
-		F22D8A3A223BE68900DE46F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22D8A38223BE68900DE46F1 /* LaunchScreen.storyboard */; };
 		F22D8A45223BE68900DE46F1 /* ViperPocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A44223BE68900DE46F1 /* ViperPocTests.swift */; };
 		F22D8A50223BE68900DE46F1 /* ViperPocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A4F223BE68900DE46F1 /* ViperPocUITests.swift */; };
-		F22D8A7A223BEC6A00DE46F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22D8A6F223BEC6900DE46F1 /* LaunchScreen.storyboard */; };
 		F22D8A7B223BEC6A00DE46F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22D8A73223BEC6A00DE46F1 /* Assets.xcassets */; };
 		F22D8A7C223BEC6A00DE46F1 /* Country.json in Resources */ = {isa = PBXBuildFile; fileRef = F22D8A76223BEC6A00DE46F1 /* Country.json */; };
 		F22D8A83223BF4EF00DE46F1 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D8A7D223BF4EE00DE46F1 /* APIResponse.swift */; };
@@ -36,10 +34,11 @@
 		F27AF8C4223C1D1E000AA859 /* CountryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8C3223C1D1E000AA859 /* CountryDataSource.swift */; };
 		F27AF8C6223C1D70000AA859 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8C5223C1D70000AA859 /* CountryCell.swift */; };
 		F27AF8C8223C20EF000AA859 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8C7223C20EF000AA859 /* CountryModel.swift */; };
-		F27AF8CF223C90AC000AA859 /* CountryPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8CE223C90AC000AA859 /* CountryPresentor.swift */; };
-		F27AF8D1223C90CB000AA859 /* CountryInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D0223C90CA000AA859 /* CountryInterector.swift */; };
+		F27AF8CF223C90AC000AA859 /* CountryInfoPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8CE223C90AC000AA859 /* CountryInfoPresentor.swift */; };
+		F27AF8D1223C90CB000AA859 /* CountryInfoInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D0223C90CA000AA859 /* CountryInfoInterector.swift */; };
 		F27AF8D5223C9129000AA859 /* CountryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D4223C9129000AA859 /* CountryRouter.swift */; };
 		F27AF8D7223C9142000AA859 /* CountryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D6223C9142000AA859 /* CountryConfiguration.swift */; };
+		F27AF8DA223CD119000AA859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27AF8D8223CD118000AA859 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 		BA7C15539FAB492E76F03D7D /* Pods_ViperPocUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperPocUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE60FC8D698F09803B315C /* Pods_ViperPocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperPocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22D8A2C223BE68400DE46F1 /* ViperPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F22D8A39223BE68900DE46F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F22D8A3B223BE68900DE46F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F22D8A40223BE68900DE46F1 /* ViperPocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperPocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22D8A44223BE68900DE46F1 /* ViperPocTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperPocTests.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 		F22D8A4B223BE68900DE46F1 /* ViperPocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperPocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22D8A4F223BE68900DE46F1 /* ViperPocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperPocUITests.swift; sourceTree = "<group>"; };
 		F22D8A51223BE68900DE46F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F22D8A70223BEC6900DE46F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F22D8A73223BEC6A00DE46F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F22D8A76223BEC6A00DE46F1 /* Country.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Country.json; sourceTree = "<group>"; };
 		F22D8A7D223BF4EE00DE46F1 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
@@ -100,10 +97,11 @@
 		F27AF8C3223C1D1E000AA859 /* CountryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataSource.swift; sourceTree = "<group>"; };
 		F27AF8C5223C1D70000AA859 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		F27AF8C7223C20EF000AA859 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
-		F27AF8CE223C90AC000AA859 /* CountryPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPresentor.swift; sourceTree = "<group>"; };
-		F27AF8D0223C90CA000AA859 /* CountryInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInterector.swift; sourceTree = "<group>"; };
+		F27AF8CE223C90AC000AA859 /* CountryInfoPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoPresentor.swift; sourceTree = "<group>"; };
+		F27AF8D0223C90CA000AA859 /* CountryInfoInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoInterector.swift; sourceTree = "<group>"; };
 		F27AF8D4223C9129000AA859 /* CountryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRouter.swift; sourceTree = "<group>"; };
 		F27AF8D6223C9142000AA859 /* CountryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryConfiguration.swift; sourceTree = "<group>"; };
+		F27AF8D9223CD118000AA859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F335DA6A9B38FCC0F21DA4FB /* Pods-ViperPocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperPocTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperPocTests/Pods-ViperPocTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,17 +183,12 @@
 			children = (
 				F22D8A5D223BEC6800DE46F1 /* AppDelegate */,
 				F22D8A6E223BEC6900DE46F1 /* Base.lproj */,
-				F22D8A5E223BEC6800DE46F1 /* Controller */,
+				F22D8A5E223BEC6800DE46F1 /* Scence */,
 				F22D8A62223BEC6900DE46F1 /* CustomView */,
 				F22D8A64223BEC6900DE46F1 /* Helper */,
 				F22D8A78223BEC6A00DE46F1 /* Entity */,
 				F22D8A6C223BEC6900DE46F1 /* Network Layer */,
 				F22D8A71223BEC6900DE46F1 /* Resources */,
-				F22D8A6B223BEC6900DE46F1 /* Interrector */,
-				F22D8A6D223BEC6900DE46F1 /* Presenter */,
-				F27AF8D3223C9108000AA859 /* Configutor */,
-				F27AF8D2223C90EA000AA859 /* Router */,
-				F22D8A38223BE68900DE46F1 /* LaunchScreen.storyboard */,
 				F22D8A3B223BE68900DE46F1 /* Info.plist */,
 			);
 			path = ViperPoc;
@@ -227,14 +220,18 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		F22D8A5E223BEC6800DE46F1 /* Controller */ = {
+		F22D8A5E223BEC6800DE46F1 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
-				F22D8A5F223BEC6800DE46F1 /* DataSource */,
 				F22D8A60223BEC6800DE46F1 /* NavigationVC */,
+				F22D8A5F223BEC6800DE46F1 /* DataSource */,
+				F27AF8D3223C9108000AA859 /* Configutor */,
+				F27AF8D2223C90EA000AA859 /* Router */,
+				F22D8A6D223BEC6900DE46F1 /* Presenter */,
+				F22D8A6B223BEC6900DE46F1 /* Interrector */,
 				F22D8A61223BEC6800DE46F1 /* VC */,
 			);
-			path = Controller;
+			path = Scence;
 			sourceTree = "<group>";
 		};
 		F22D8A5F223BEC6800DE46F1 /* DataSource */ = {
@@ -331,7 +328,7 @@
 		F22D8A6B223BEC6900DE46F1 /* Interrector */ = {
 			isa = PBXGroup;
 			children = (
-				F27AF8D0223C90CA000AA859 /* CountryInterector.swift */,
+				F27AF8D0223C90CA000AA859 /* CountryInfoInterector.swift */,
 			);
 			path = Interrector;
 			sourceTree = "<group>";
@@ -352,7 +349,7 @@
 		F22D8A6D223BEC6900DE46F1 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				F27AF8CE223C90AC000AA859 /* CountryPresentor.swift */,
+				F27AF8CE223C90AC000AA859 /* CountryInfoPresentor.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -360,7 +357,7 @@
 		F22D8A6E223BEC6900DE46F1 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				F22D8A6F223BEC6900DE46F1 /* LaunchScreen.storyboard */,
+				F27AF8D8223CD118000AA859 /* LaunchScreen.storyboard */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -424,7 +421,7 @@
 				F27AF8D4223C9129000AA859 /* CountryRouter.swift */,
 			);
 			name = Router;
-			path = ViperPoc/Router;
+			path = ViperPoc/Scence/Router;
 			sourceTree = SOURCE_ROOT;
 		};
 		F27AF8D3223C9108000AA859 /* Configutor */ = {
@@ -433,7 +430,7 @@
 				F27AF8D6223C9142000AA859 /* CountryConfiguration.swift */,
 			);
 			name = Configutor;
-			path = ViperPoc/Configutor;
+			path = ViperPoc/Scence/Configutor;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -545,8 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22D8A3A223BE68900DE46F1 /* LaunchScreen.storyboard in Resources */,
-				F22D8A7A223BEC6A00DE46F1 /* LaunchScreen.storyboard in Resources */,
+				F27AF8DA223CD119000AA859 /* LaunchScreen.storyboard in Resources */,
 				F22D8A7B223BEC6A00DE46F1 /* Assets.xcassets in Resources */,
 				F22D8A7C223BEC6A00DE46F1 /* Country.json in Resources */,
 			);
@@ -669,7 +665,7 @@
 				F22D8A96223C0BEE00DE46F1 /* ViewControllerExtension.swift in Sources */,
 				F22D8A8E223BF77E00DE46F1 /* CountryVC.swift in Sources */,
 				F22D8A94223C0BE100DE46F1 /* AlertViewControllerExtension.swift in Sources */,
-				F27AF8D1223C90CB000AA859 /* CountryInterector.swift in Sources */,
+				F27AF8D1223C90CB000AA859 /* CountryInfoInterector.swift in Sources */,
 				F22D8A90223C0BC500DE46F1 /* ScaledHeightImageView.swift in Sources */,
 				F22D8A85223BF4F100DE46F1 /* PostServicePath.swift in Sources */,
 				F27AF8C8223C20EF000AA859 /* CountryModel.swift in Sources */,
@@ -689,7 +685,7 @@
 				F27AF8C2223C11C7000AA859 /* Globel.swift in Sources */,
 				F27AF8C6223C1D70000AA859 /* CountryCell.swift in Sources */,
 				F22D8A88223BF4F100DE46F1 /* APIClient.swift in Sources */,
-				F27AF8CF223C90AC000AA859 /* CountryPresentor.swift in Sources */,
+				F27AF8CF223C90AC000AA859 /* CountryInfoPresentor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,18 +721,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F22D8A38223BE68900DE46F1 /* LaunchScreen.storyboard */ = {
+		F27AF8D8223CD118000AA859 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F22D8A39223BE68900DE46F1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F22D8A6F223BEC6900DE46F1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F22D8A70223BEC6900DE46F1 /* Base */,
+				F27AF8D9223CD118000AA859 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
