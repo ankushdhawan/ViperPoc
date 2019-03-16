@@ -33,6 +33,13 @@
 		F27AF8C0223C11C7000AA859 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8BD223C11C7000AA859 /* Constants.swift */; };
 		F27AF8C1223C11C7000AA859 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8BE223C11C7000AA859 /* ColorManager.swift */; };
 		F27AF8C2223C11C7000AA859 /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8BF223C11C7000AA859 /* Globel.swift */; };
+		F27AF8C4223C1D1E000AA859 /* CountryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8C3223C1D1E000AA859 /* CountryDataSource.swift */; };
+		F27AF8C6223C1D70000AA859 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8C5223C1D70000AA859 /* CountryCell.swift */; };
+		F27AF8C8223C20EF000AA859 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8C7223C20EF000AA859 /* CountryModel.swift */; };
+		F27AF8CF223C90AC000AA859 /* CountryPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8CE223C90AC000AA859 /* CountryPresentor.swift */; };
+		F27AF8D1223C90CB000AA859 /* CountryInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D0223C90CA000AA859 /* CountryInterector.swift */; };
+		F27AF8D5223C9129000AA859 /* CountryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D4223C9129000AA859 /* CountryRouter.swift */; };
+		F27AF8D7223C9142000AA859 /* CountryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D6223C9142000AA859 /* CountryConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +97,13 @@
 		F27AF8BD223C11C7000AA859 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F27AF8BE223C11C7000AA859 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		F27AF8BF223C11C7000AA859 /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
+		F27AF8C3223C1D1E000AA859 /* CountryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataSource.swift; sourceTree = "<group>"; };
+		F27AF8C5223C1D70000AA859 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		F27AF8C7223C20EF000AA859 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		F27AF8CE223C90AC000AA859 /* CountryPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPresentor.swift; sourceTree = "<group>"; };
+		F27AF8D0223C90CA000AA859 /* CountryInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInterector.swift; sourceTree = "<group>"; };
+		F27AF8D4223C9129000AA859 /* CountryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRouter.swift; sourceTree = "<group>"; };
+		F27AF8D6223C9142000AA859 /* CountryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryConfiguration.swift; sourceTree = "<group>"; };
 		F335DA6A9B38FCC0F21DA4FB /* Pods-ViperPocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperPocTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperPocTests/Pods-ViperPocTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +193,8 @@
 				F22D8A71223BEC6900DE46F1 /* Resources */,
 				F22D8A6B223BEC6900DE46F1 /* Interrector */,
 				F22D8A6D223BEC6900DE46F1 /* Presenter */,
+				F27AF8D3223C9108000AA859 /* Configutor */,
+				F27AF8D2223C90EA000AA859 /* Router */,
 				F22D8A38223BE68900DE46F1 /* LaunchScreen.storyboard */,
 				F22D8A3B223BE68900DE46F1 /* Info.plist */,
 			);
@@ -224,6 +240,7 @@
 		F22D8A5F223BEC6800DE46F1 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				F27AF8C3223C1D1E000AA859 /* CountryDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -255,6 +272,7 @@
 		F22D8A63223BEC6900DE46F1 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				F27AF8C5223C1D70000AA859 /* CountryCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -313,6 +331,7 @@
 		F22D8A6B223BEC6900DE46F1 /* Interrector */ = {
 			isa = PBXGroup;
 			children = (
+				F27AF8D0223C90CA000AA859 /* CountryInterector.swift */,
 			);
 			path = Interrector;
 			sourceTree = "<group>";
@@ -333,6 +352,7 @@
 		F22D8A6D223BEC6900DE46F1 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F27AF8CE223C90AC000AA859 /* CountryPresentor.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -393,9 +413,28 @@
 		F22D8A78223BEC6A00DE46F1 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				F27AF8C7223C20EF000AA859 /* CountryModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
+		};
+		F27AF8D2223C90EA000AA859 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F27AF8D4223C9129000AA859 /* CountryRouter.swift */,
+			);
+			name = Router;
+			path = ViperPoc/Router;
+			sourceTree = SOURCE_ROOT;
+		};
+		F27AF8D3223C9108000AA859 /* Configutor */ = {
+			isa = PBXGroup;
+			children = (
+				F27AF8D6223C9142000AA859 /* CountryConfiguration.swift */,
+			);
+			name = Configutor;
+			path = ViperPoc/Configutor;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -630,10 +669,15 @@
 				F22D8A96223C0BEE00DE46F1 /* ViewControllerExtension.swift in Sources */,
 				F22D8A8E223BF77E00DE46F1 /* CountryVC.swift in Sources */,
 				F22D8A94223C0BE100DE46F1 /* AlertViewControllerExtension.swift in Sources */,
+				F27AF8D1223C90CB000AA859 /* CountryInterector.swift in Sources */,
 				F22D8A90223C0BC500DE46F1 /* ScaledHeightImageView.swift in Sources */,
 				F22D8A85223BF4F100DE46F1 /* PostServicePath.swift in Sources */,
+				F27AF8C8223C20EF000AA859 /* CountryModel.swift in Sources */,
 				F27AF8C0223C11C7000AA859 /* Constants.swift in Sources */,
+				F27AF8D5223C9129000AA859 /* CountryRouter.swift in Sources */,
+				F27AF8D7223C9142000AA859 /* CountryConfiguration.swift in Sources */,
 				F22D8A87223BF4F100DE46F1 /* APIEndPoint.swift in Sources */,
+				F27AF8C4223C1D1E000AA859 /* CountryDataSource.swift in Sources */,
 				F27AF8C1223C11C7000AA859 /* ColorManager.swift in Sources */,
 				F27AF8BC223C1149000AA859 /* CustomFlowLayout.swift in Sources */,
 				F22D8A83223BF4EF00DE46F1 /* APIResponse.swift in Sources */,
@@ -643,7 +687,9 @@
 				F22D8A84223BF4F100DE46F1 /* MockServices.swift in Sources */,
 				F22D8A92223C0BD800DE46F1 /* CollectionView+Extension.swift in Sources */,
 				F27AF8C2223C11C7000AA859 /* Globel.swift in Sources */,
+				F27AF8C6223C1D70000AA859 /* CountryCell.swift in Sources */,
 				F22D8A88223BF4F100DE46F1 /* APIClient.swift in Sources */,
+				F27AF8CF223C90AC000AA859 /* CountryPresentor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
