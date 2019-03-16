@@ -39,6 +39,10 @@
 		F27AF8D5223C9129000AA859 /* CountryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D4223C9129000AA859 /* CountryRouter.swift */; };
 		F27AF8D7223C9142000AA859 /* CountryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8D6223C9142000AA859 /* CountryConfiguration.swift */; };
 		F27AF8DA223CD119000AA859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27AF8D8223CD118000AA859 /* LaunchScreen.storyboard */; };
+		F27AF8DC223CE469000AA859 /* CountryVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8DB223CE469000AA859 /* CountryVCTests.swift */; };
+		F27AF8DE223CE4E6000AA859 /* CountryDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8DD223CE4E6000AA859 /* CountryDataSourceTests.swift */; };
+		F27AF8E0223CE526000AA859 /* CountryPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8DF223CE526000AA859 /* CountryPresenterTest.swift */; };
+		F27AF8E2223CE563000AA859 /* CountryModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8E1223CE563000AA859 /* CountryModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +106,10 @@
 		F27AF8D4223C9129000AA859 /* CountryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRouter.swift; sourceTree = "<group>"; };
 		F27AF8D6223C9142000AA859 /* CountryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryConfiguration.swift; sourceTree = "<group>"; };
 		F27AF8D9223CD118000AA859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F27AF8DB223CE469000AA859 /* CountryVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryVCTests.swift; sourceTree = "<group>"; };
+		F27AF8DD223CE4E6000AA859 /* CountryDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataSourceTests.swift; sourceTree = "<group>"; };
+		F27AF8DF223CE526000AA859 /* CountryPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPresenterTest.swift; sourceTree = "<group>"; };
+		F27AF8E1223CE563000AA859 /* CountryModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModelTests.swift; sourceTree = "<group>"; };
 		F335DA6A9B38FCC0F21DA4FB /* Pods-ViperPocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperPocTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperPocTests/Pods-ViperPocTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				F22D8A44223BE68900DE46F1 /* ViperPocTests.swift */,
+				F27AF8DB223CE469000AA859 /* CountryVCTests.swift */,
+				F27AF8DD223CE4E6000AA859 /* CountryDataSourceTests.swift */,
+				F27AF8DF223CE526000AA859 /* CountryPresenterTest.swift */,
+				F27AF8E1223CE563000AA859 /* CountryModelTests.swift */,
 				F22D8A46223BE68900DE46F1 /* Info.plist */,
 			);
 			path = ViperPocTests;
@@ -694,6 +706,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F22D8A45223BE68900DE46F1 /* ViperPocTests.swift in Sources */,
+				F27AF8E2223CE563000AA859 /* CountryModelTests.swift in Sources */,
+				F27AF8E0223CE526000AA859 /* CountryPresenterTest.swift in Sources */,
+				F27AF8DE223CE4E6000AA859 /* CountryDataSourceTests.swift in Sources */,
+				F27AF8DC223CE469000AA859 /* CountryVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
