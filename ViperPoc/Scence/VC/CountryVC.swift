@@ -42,6 +42,28 @@ class CountryVC: UIViewController {
         addConstraint()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        Constants.isIpad ? self.setLayoutForIpad() : ()
+        
+    }
+    
+    //MARK:PRIVATE METHOD(S)
+    func setLayoutForIpad()
+    {
+        //SHOW UI FOR IPAD OF COLLECTIONVIEW
+        if UIDevice.current.orientation.isLandscape {
+            print("landscape")
+            flowLayout.numberOfColumns = 4
+        } else {
+            print("portrait")
+            flowLayout.numberOfColumns = 3
+            
+        }
+        flowLayout.reloadLayout()
+        countryDescCollectionView.reloadData()
+        
+    }
+    
     
     func fetchCountryDetail()
     {
