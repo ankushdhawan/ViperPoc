@@ -167,6 +167,14 @@ class CountryVC: UIViewController {
         let height = (label.frame.height < 30) ? 70.0 : label.frame.height + 50
         return height
     }
+    //MARK:SCROLLVIEW DELGATE
+    //FOR BOUNCING LEFT RIGHT ISSUE I USE THIS CODE
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == countryDescCollectionView {
+            //you will never bounce to left
+            scrollView.contentOffset.x = max(0,scrollView.contentOffset.x - 40)
+        }
+    }
     
     
 }
