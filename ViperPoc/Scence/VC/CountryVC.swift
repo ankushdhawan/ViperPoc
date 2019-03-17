@@ -21,7 +21,7 @@ class CountryVC: UIViewController {
         let flowLayout = UICustomCollectionViewLayout()
         flowLayout.numberOfColumns = 1
         let collectionView = UICollectionView(frame:CGRect(x: 0, y: 0, width: 300, height: 300), collectionViewLayout: flowLayout)
-        collectionView.bounces = false
+        collectionView.alwaysBounceHorizontal = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = UIColor.white
         return collectionView
@@ -31,8 +31,8 @@ class CountryVC: UIViewController {
         super.viewDidLoad()
         configurator.configurationCountryInfo(vc: self)
         customInit()
-        fetchCountryDetail()
         setUpHandler()
+        countryInfoPresentor?.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -65,14 +65,16 @@ class CountryVC: UIViewController {
     }
     
     
-    func fetchCountryDetail()
-    {
-        showLoader(with: self.view)
-        let servicePath = JCPostServicePath.countryDetail()
-        countryInfoPresentor?.callWebServices(servicePath: servicePath)
-    }
+   
     // Handler handle all the callbacks from View Mddek
     func setUpHandler()  {
+        countryInfoPresentor?.showLoaderClosure = { [weak self] (signal) in
+            print(signal)
+            signal ? showLoader(with: self!.view) : hideLoader(parentView: self!.view)
+            
+        }
+        
+        
         // Handle the success response from ViewModel
         countryInfoPresentor?.successViewClosure = { [weak self] () in
             DispatchQueue.main.async {
@@ -96,6 +98,9 @@ class CountryVC: UIViewController {
                 
             }
             } as ((String) -> ())
+        
+        
+        
     }
     
     private func customInit()
@@ -113,7 +118,7 @@ class CountryVC: UIViewController {
         countryDescCollectionView.reloadData()
         //PULL TO REFRESH CALL BACK
         countryDescCollectionView.pullToRefresh() { [weak self] in
-            self?.fetchCountryDetail()
+            self?.countryInfoPresentor?.fetchAPI()
         }
         
     }

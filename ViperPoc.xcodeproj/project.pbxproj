@@ -43,6 +43,7 @@
 		F27AF8DE223CE4E6000AA859 /* CountryDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8DD223CE4E6000AA859 /* CountryDataSourceTests.swift */; };
 		F27AF8E0223CE526000AA859 /* CountryPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8DF223CE526000AA859 /* CountryPresenterTest.swift */; };
 		F27AF8E2223CE563000AA859 /* CountryModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8E1223CE563000AA859 /* CountryModelTests.swift */; };
+		F27AF8EC223D5B0A000AA859 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8EB223D5B09000AA859 /* ApplicationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		F27AF8DD223CE4E6000AA859 /* CountryDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataSourceTests.swift; sourceTree = "<group>"; };
 		F27AF8DF223CE526000AA859 /* CountryPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPresenterTest.swift; sourceTree = "<group>"; };
 		F27AF8E1223CE563000AA859 /* CountryModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModelTests.swift; sourceTree = "<group>"; };
+		F27AF8EB223D5B09000AA859 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		F335DA6A9B38FCC0F21DA4FB /* Pods-ViperPocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperPocTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperPocTests/Pods-ViperPocTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 		F22D8A2E223BE68400DE46F1 /* ViperPoc */ = {
 			isa = PBXGroup;
 			children = (
+				F27AF8ED223E07B4000AA859 /* Coordinator */,
 				F22D8A5D223BEC6800DE46F1 /* AppDelegate */,
 				F22D8A6E223BEC6900DE46F1 /* Base.lproj */,
 				F22D8A5E223BEC6800DE46F1 /* Scence */,
@@ -445,6 +448,14 @@
 			path = ViperPoc/Scence/Configutor;
 			sourceTree = SOURCE_ROOT;
 		};
+		F27AF8ED223E07B4000AA859 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F27AF8EB223D5B09000AA859 /* ApplicationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -679,6 +690,7 @@
 				F22D8A94223C0BE100DE46F1 /* AlertViewControllerExtension.swift in Sources */,
 				F27AF8D1223C90CB000AA859 /* CountryInfoInterector.swift in Sources */,
 				F22D8A90223C0BC500DE46F1 /* ScaledHeightImageView.swift in Sources */,
+				F27AF8EC223D5B0A000AA859 /* ApplicationCoordinator.swift in Sources */,
 				F22D8A85223BF4F100DE46F1 /* PostServicePath.swift in Sources */,
 				F27AF8C8223C20EF000AA859 /* CountryModel.swift in Sources */,
 				F27AF8C0223C11C7000AA859 /* Constants.swift in Sources */,

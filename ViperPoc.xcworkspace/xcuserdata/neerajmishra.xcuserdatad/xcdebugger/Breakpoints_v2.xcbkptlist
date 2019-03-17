@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ViperPoc/AppDelegate/AppDelegate.swift"
-            timestampString = "574427062.413417"
+            filePath = "ViperPoc/Scence/Presenter/CountryInfoPresentor.swift"
+            timestampString = "574494688.3170021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "isLoaderShow"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViperPoc/Scence/Presenter/CountryInfoPresentor.swift"
+            timestampString = "574494688.322345"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "callWebServices(servicePath:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

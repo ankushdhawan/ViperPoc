@@ -12,15 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    private var applicationCoordinator: ApplicationCoordinator?  // 1
+
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow()
-        window?.makeKeyAndVisible()
-        let rootNavVC = RootNavVC()
-        window?.rootViewController = rootNavVC
-        print(Bundle.main.infoDictionary?["APP_ENV"])
+        applicationCoordinator = ApplicationCoordinator(window:window!)
+       applicationCoordinator?.start()
         return true
     }
     
