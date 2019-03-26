@@ -32,7 +32,7 @@ public class UICustomCollectionViewLayout: UICollectionViewLayout {
     
     func reloadLayout()
     {
-        
+        contentHeight = 0.0
         cache.removeAll()
         prepare()
         
