@@ -59,13 +59,6 @@ extension UIAlertController {
     ///   - completion: an optional completion handler to be called after presenting alert controller (default is nil).
     public func show(animated: Bool = true, vibrate: Bool = false, style: UIBlurEffect.Style? = nil, completion: (() -> Void)? = nil) {
         
-        /// TODO: change UIBlurEffectStyle
-//        if style != nil {
-////            for subview in view.allSubViewsOf(type: UIVisualEffectView.self) {
-////                subview.effect = UIBlurEffect(style: style)
-////            }
-//        }
-        
         DispatchQueue.main.async {
             UIApplication.shared.keyWindow?.rootViewController?.present(self, animated: animated, completion: completion)
             if vibrate {

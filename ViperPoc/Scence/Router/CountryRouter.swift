@@ -8,18 +8,9 @@
 
 import Foundation
 import UIKit
-protocol viewRouter {
-    func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
-    
-}
-extension viewRouter
-{
-    func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
-    {
-    }
-}
 
-protocol CountryRouterProtocol:viewRouter {
+
+protocol CountryRouterProtocol {
     func navigateCountryDetailVC(cat: CountryDetailModel)
 }
 class CountryRouter: CountryRouterProtocol {
@@ -31,9 +22,8 @@ class CountryRouter: CountryRouterProtocol {
    func navigateCountryDetailVC(cat: CountryDetailModel) {
         catModel = cat
     //ADD THE NAVIGATION CODE IN THIS CONTROLLER
-    //catVC?.performSegue(withIdentifier:"CategoryListController", sender: nil)
-    }
-    func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        
-    }
+    let vc = CountryDetailVC()
+    self.catVC?.navigationController?.pushViewController(vc, animated: true)
+        }
+    
 }

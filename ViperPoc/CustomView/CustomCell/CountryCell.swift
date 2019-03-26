@@ -13,7 +13,6 @@ class CountryCell: UICollectionViewCell {
     var containerView:UIView = {
         var view = UIView()
         view.clipsToBounds = true
-        //view.backgroundColor = UIColor.lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -32,7 +31,6 @@ class CountryCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
-        //label.backgroundColor = UIColor.cyan
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -40,7 +38,6 @@ class CountryCell: UICollectionViewCell {
     var countryImageView:ScaledHeightImageView = {
         var imageView = ScaledHeightImageView()
         imageView.contentMode = .scaleAspectFill
-        //imageView.image = UIImage(named: "PlaceHolder")
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -140,6 +137,7 @@ class CountryCell: UICollectionViewCell {
         allConstraints += descriptionLabelHorizontalConstraints
         
         NSLayoutConstraint.activate(allConstraints)
+        self.layoutIfNeeded()
         
         
         

@@ -26,8 +26,7 @@ class CountryInfoInterector  {
         }) { (response) in
           if response.isFailure
           {
-            //var errors = response.value as? APIError
-           
+           print(response)
             }
             else
           {

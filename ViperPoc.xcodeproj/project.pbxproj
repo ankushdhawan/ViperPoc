@@ -44,6 +44,7 @@
 		F27AF8E0223CE526000AA859 /* CountryPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8DF223CE526000AA859 /* CountryPresenterTest.swift */; };
 		F27AF8E2223CE563000AA859 /* CountryModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8E1223CE563000AA859 /* CountryModelTests.swift */; };
 		F27AF8EC223D5B0A000AA859 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AF8EB223D5B09000AA859 /* ApplicationCoordinator.swift */; };
+		F28CD2FF223E5C2B00BD7025 /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CD2FE223E5C2B00BD7025 /* CountryDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		F27AF8DF223CE526000AA859 /* CountryPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPresenterTest.swift; sourceTree = "<group>"; };
 		F27AF8E1223CE563000AA859 /* CountryModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModelTests.swift; sourceTree = "<group>"; };
 		F27AF8EB223D5B09000AA859 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		F28CD2FE223E5C2B00BD7025 /* CountryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
 		F335DA6A9B38FCC0F21DA4FB /* Pods-ViperPocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperPocTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperPocTests/Pods-ViperPocTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				F22D8A8D223BF77E00DE46F1 /* CountryVC.swift */,
+				F28CD2FE223E5C2B00BD7025 /* CountryDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				F22D8A84223BF4F100DE46F1 /* MockServices.swift in Sources */,
 				F22D8A92223C0BD800DE46F1 /* CollectionView+Extension.swift in Sources */,
 				F27AF8C2223C11C7000AA859 /* Globel.swift in Sources */,
+				F28CD2FF223E5C2B00BD7025 /* CountryDetailVC.swift in Sources */,
 				F27AF8C6223C1D70000AA859 /* CountryCell.swift in Sources */,
 				F22D8A88223BF4F100DE46F1 /* APIClient.swift in Sources */,
 				F27AF8CF223C90AC000AA859 /* CountryInfoPresentor.swift in Sources */,

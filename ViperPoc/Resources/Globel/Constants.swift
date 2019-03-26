@@ -1,3 +1,11 @@
+//
+//  Constants.swift
+//  ViperPoc
+//
+//  Created by Ankush Dhawan on 3/16/19.
+//  Copyright © 2019 Reliance. All rights reserved.
+//
+
 
 import Foundation
 import UIKit
@@ -20,14 +28,9 @@ struct Constants {
         }
     }
 static var kScreenHeight = UIScreen.main.bounds.height
-static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
 }
-struct ScreenTitle
-{
-        static let kTitleSettings = ""
-    
-    }
+
 
 
 

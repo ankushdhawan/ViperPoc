@@ -29,29 +29,46 @@ class CountryVC: UIViewController {
     //MARK:LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNotificationObserver()
         configurator.configurationCountryInfo(vc: self)
         customInit()
         setUpHandler()
         countryInfoPresentor?.viewDidLoad()
+        
+
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
+   
     override func viewWillLayoutSubviews() {
         
         addConstraint()
     }
+    //MARK:DESTROY OBJECT FROM MEMORY
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
     
+    //MARK:DEVICE ORIENTATION WILL CHANGE METHOD
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         Constants.isIpad ? self.setLayoutForIpad() : ()
-        
+        // setLayoutForIpad()
+    }
+    //MARK:DEVICE ORIENTATION DID CHANGE METHOD
+
+    @objc func deviceOrientationDidChange()  {
+        print("deviceDidRotate")
+        //   setLayoutForIpad()
+        !Constants.isIpad ? self.setLayoutForIphone() : ()
     }
     
     //MARK:PRIVATE METHOD(S)
     func setLayoutForIpad()
     {
         //SHOW UI FOR IPAD OF COLLECTIONVIEW
-        if UIDevice.current.orientation.isLandscape {
+       if UIDevice.current.orientation.isLandscape {
             print("landscape")
             flowLayout.numberOfColumns = 4
         } else {
@@ -64,7 +81,17 @@ class CountryVC: UIViewController {
         
     }
     
-    
+    func setLayoutForIphone()
+    {
+        //SHOW UI FOR IPHONE OF COLLECTIONVIEW
+        flowLayout.reloadLayout()
+        countryDescCollectionView.reloadData()
+        
+    }
+    func addNotificationObserver()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChange), name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
    
     // Handler handle all the callbacks from View Mddek
     func setUpHandler()  {
@@ -144,14 +171,15 @@ class CountryVC: UIViewController {
             views: views)
         allConstraints += tableViewHorizontalConstraints
         NSLayoutConstraint.activate(allConstraints)
-        
-    }
+        self.view.layoutIfNeeded()
+}
     
     //MARK:GRID HEIGHT CALCULATION METHOD(S)
     func getGridHeight(model:CountryDetailModel)->CGSize
     {
         let text = model.description ?? ""
         let width = Constants.isIpad ? (Constants.kScreenWidth/CGFloat(flowLayout.numberOfColumns) - 40) : Constants.kScreenWidth
+        print(width)
         return  CGSize(width: width, height: heightForView(text: text, width: width))
         
     }
@@ -164,7 +192,7 @@ class CountryVC: UIViewController {
         label.font = font
         label.text = text
         label.sizeToFit()
-        let height = (label.frame.height < 30) ? 70.0 : label.frame.height + 50
+        let height = (label.frame.height < 30) ? 80.0 : label.frame.height + 50
         return height
     }
     //MARK:SCROLLVIEW DELGATE

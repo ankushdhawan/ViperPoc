@@ -19,12 +19,7 @@ class CountryPresenterTest: XCTestCase
     var mockAPIService: MockService!
     override func setUp() {
         super.setUp()
-        //Create View Model Object
-//        sut = CountryInfoPresenter(apiInterector: <#T##CountryInfoInterector#>, router: <#T##CountryRouter#>)
-        
-        
-        
-    }
+      }
     override func tearDown() {
         //sut = nil
         mockAPIService = nil
