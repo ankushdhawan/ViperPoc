@@ -12,7 +12,8 @@ class CountryVC: UIViewController {
 
     //MARK:VARIABLE DECELARATION
     var countryInfoPresentor:CountryInfoPresenter? = nil
-    private var dataSource = CountryDataSource()
+   // private var dataSource = CountryDataSource()
+    var dataSource : GenricDataSource<CountryCell,CountryDetailModel> =  GenricDataSource<CountryCell,CountryDetailModel>()
     let flowLayout = UICustomCollectionViewLayout()
     var configurator = CountryConfiguration()
 
@@ -29,6 +30,7 @@ class CountryVC: UIViewController {
     //MARK:LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNotificationObserver()
         configurator.configurationCountryInfo(vc: self)
         customInit()
         setUpHandler()
@@ -36,22 +38,35 @@ class CountryVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
+   
     override func viewWillLayoutSubviews() {
         
         addConstraint()
     }
+    //MARK:DESTROY OBJECT FROM MEMORY
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
     
+    //MARK:DEVICE ORIENTATION WILL CHANGE METHOD
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         Constants.isIpad ? self.setLayoutForIpad() : ()
-        
+        // setLayoutForIpad()
+    }
+    //MARK:DEVICE ORIENTATION DID CHANGE METHOD
+
+    @objc func deviceOrientationDidChange()  {
+        print("deviceDidRotate")
+        //   setLayoutForIpad()
+        !Constants.isIpad ? self.setLayoutForIphone() : ()
     }
     
     //MARK:PRIVATE METHOD(S)
     func setLayoutForIpad()
     {
         //SHOW UI FOR IPAD OF COLLECTIONVIEW
-        if UIDevice.current.orientation.isLandscape {
+       if UIDevice.current.orientation.isLandscape {
             print("landscape")
             flowLayout.numberOfColumns = 4
         } else {
@@ -64,7 +79,17 @@ class CountryVC: UIViewController {
         
     }
     
-    
+    func setLayoutForIphone()
+    {
+        //SHOW UI FOR IPHONE OF COLLECTIONVIEW
+        flowLayout.reloadLayout()
+        countryDescCollectionView.reloadData()
+        
+    }
+    func addNotificationObserver()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChange), name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
    
     // Handler handle all the callbacks from View Mddek
     func setUpHandler()  {
@@ -79,7 +104,7 @@ class CountryVC: UIViewController {
         countryInfoPresentor?.successViewClosure = { [weak self] () in
             DispatchQueue.main.async {
                 hideLoader(parentView: (self?.view)!)
-                self?.dataSource.countryDtailModels = self?.countryInfoPresentor?.countryInfo!.rows ?? [CountryDetailModel]()
+                self?.dataSource.itemList = self?.countryInfoPresentor?.countryInfo!.rows ?? [CountryDetailModel]()
                 self?.countryDescCollectionView.reloadData()
                 self?.title = self?.countryInfoPresentor?.countryInfo?.title
                 self?.countryInfoPresentor?.countryInfo?.rows.count == 0 ? self?.countryDescCollectionView.showEmptyScreen("No Data Found.") :self?.countryDescCollectionView.showEmptyScreen("")
@@ -144,14 +169,15 @@ class CountryVC: UIViewController {
             views: views)
         allConstraints += tableViewHorizontalConstraints
         NSLayoutConstraint.activate(allConstraints)
-        
-    }
+        self.view.layoutIfNeeded()
+}
     
     //MARK:GRID HEIGHT CALCULATION METHOD(S)
     func getGridHeight(model:CountryDetailModel)->CGSize
     {
         let text = model.description ?? ""
         let width = Constants.isIpad ? (Constants.kScreenWidth/CGFloat(flowLayout.numberOfColumns) - 40) : Constants.kScreenWidth
+        print(width)
         return  CGSize(width: width, height: heightForView(text: text, width: width))
         
     }
@@ -164,7 +190,7 @@ class CountryVC: UIViewController {
         label.font = font
         label.text = text
         label.sizeToFit()
-        let height = (label.frame.height < 30) ? 70.0 : label.frame.height + 50
+        let height = (label.frame.height < 30) ? 80.0 : label.frame.height + 50
         return height
     }
     //MARK:SCROLLVIEW DELGATE
@@ -181,9 +207,9 @@ class CountryVC: UIViewController {
 extension CountryVC:UICollectionViewDelegate,CustomLayoutDelegate
 {
     func collectionView(_ collectionView: UICollectionView, heightForItemAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
-        if dataSource.countryDtailModels[indexPath.row] != nil
+        if dataSource.itemList[indexPath.row] != nil
         {
-            return getGridHeight(model: dataSource.countryDtailModels[indexPath.row]).height
+            return getGridHeight(model: dataSource.itemList[indexPath.row]).height
         }
         return CGSize(width: Constants.kScreenWidth, height: 40).height
     }

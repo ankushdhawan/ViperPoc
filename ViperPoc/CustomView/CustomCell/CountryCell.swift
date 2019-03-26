@@ -8,12 +8,20 @@
 
 import UIKit
 import Kingfisher
-class CountryCell: UICollectionViewCell {
+
+class BaseCell<U>: UICollectionViewCell {
+    
+    func configure(model:U)
+    {
+        
+    }
+}
+
+class CountryCell: BaseCell<CountryDetailModel> {
     //MARK:DECELARTION OF OBJECTS
     var containerView:UIView = {
         var view = UIView()
         view.clipsToBounds = true
-        //view.backgroundColor = UIColor.lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -32,7 +40,6 @@ class CountryCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
-        //label.backgroundColor = UIColor.cyan
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -40,7 +47,6 @@ class CountryCell: UICollectionViewCell {
     var countryImageView:ScaledHeightImageView = {
         var imageView = ScaledHeightImageView()
         imageView.contentMode = .scaleAspectFill
-        //imageView.image = UIImage(named: "PlaceHolder")
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -62,17 +68,18 @@ class CountryCell: UICollectionViewCell {
     }
     
     //MARK:PUBLIC METHOD(S)
-    public func configureView(model:CountryDetailModel?)
+    
+    override func configure(model:CountryDetailModel)
     {
         self.addSubview(containerView)
         containerView.addSubview(countryImageView)
         containerView.addSubview(titleLable)
         containerView.addSubview(descriptionLable)
         // SET MODEL CONTENT TO LABEL AND IMAGE
-        titleLable.text = model?.title
-        descriptionLable.text = model?.description
+        titleLable.text = model.title
+        descriptionLable.text = model.description
         // CHECK IMAGE IS URL NOT LOADING IMAGE THEN SHOW PLACEHOILDER IMAGE
-        let url = URL(string: model?.imageHref ?? "")
+        let url = URL(string: model.imageHref ?? "")
         countryImageView.kf.indicatorType = .activity
         countryImageView.kf.setImage(with: url) {[weak self] result in
             switch result {
@@ -84,6 +91,7 @@ class CountryCell: UICollectionViewCell {
             }
         }
     }
+   
     //MARK:PRIVATE METHOD(S)
     private  func addConstraint()
     {
@@ -140,6 +148,7 @@ class CountryCell: UICollectionViewCell {
         allConstraints += descriptionLabelHorizontalConstraints
         
         NSLayoutConstraint.activate(allConstraints)
+        self.layoutIfNeeded()
         
         
         
