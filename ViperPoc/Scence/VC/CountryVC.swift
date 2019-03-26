@@ -12,7 +12,8 @@ class CountryVC: UIViewController {
 
     //MARK:VARIABLE DECELARATION
     var countryInfoPresentor:CountryInfoPresenter? = nil
-    private var dataSource = CountryDataSource()
+   // private var dataSource = CountryDataSource()
+    var dataSource : GenricDataSource<CountryCell,CountryDetailModel> =  GenricDataSource<CountryCell,CountryDetailModel>()
     let flowLayout = UICustomCollectionViewLayout()
     var configurator = CountryConfiguration()
 
@@ -34,9 +35,6 @@ class CountryVC: UIViewController {
         customInit()
         setUpHandler()
         countryInfoPresentor?.viewDidLoad()
-        
-
-
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -106,7 +104,7 @@ class CountryVC: UIViewController {
         countryInfoPresentor?.successViewClosure = { [weak self] () in
             DispatchQueue.main.async {
                 hideLoader(parentView: (self?.view)!)
-                self?.dataSource.countryDtailModels = self?.countryInfoPresentor?.countryInfo!.rows ?? [CountryDetailModel]()
+                self?.dataSource.itemList = self?.countryInfoPresentor?.countryInfo!.rows ?? [CountryDetailModel]()
                 self?.countryDescCollectionView.reloadData()
                 self?.title = self?.countryInfoPresentor?.countryInfo?.title
                 self?.countryInfoPresentor?.countryInfo?.rows.count == 0 ? self?.countryDescCollectionView.showEmptyScreen("No Data Found.") :self?.countryDescCollectionView.showEmptyScreen("")
@@ -209,9 +207,9 @@ class CountryVC: UIViewController {
 extension CountryVC:UICollectionViewDelegate,CustomLayoutDelegate
 {
     func collectionView(_ collectionView: UICollectionView, heightForItemAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
-        if dataSource.countryDtailModels[indexPath.row] != nil
+        if dataSource.itemList[indexPath.row] != nil
         {
-            return getGridHeight(model: dataSource.countryDtailModels[indexPath.row]).height
+            return getGridHeight(model: dataSource.itemList[indexPath.row]).height
         }
         return CGSize(width: Constants.kScreenWidth, height: 40).height
     }

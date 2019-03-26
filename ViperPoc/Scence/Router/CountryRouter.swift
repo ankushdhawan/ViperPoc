@@ -15,15 +15,11 @@ protocol CountryRouterProtocol {
 }
 class CountryRouter: CountryRouterProtocol {
    var catVC:CountryVC?
-    var catModel:CountryDetailModel?
     init(catViewController: CountryVC) {
         self.catVC = catViewController
     }
    func navigateCountryDetailVC(cat: CountryDetailModel) {
-        catModel = cat
     //ADD THE NAVIGATION CODE IN THIS CONTROLLER
-    let vc = CountryDetailVC()
-    self.catVC?.navigationController?.pushViewController(vc, animated: true)
         }
     
 }

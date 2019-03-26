@@ -8,7 +8,16 @@
 
 import UIKit
 import Kingfisher
-class CountryCell: UICollectionViewCell {
+
+class BaseCell<U>: UICollectionViewCell {
+    
+    func configure(model:U)
+    {
+        
+    }
+}
+
+class CountryCell: BaseCell<CountryDetailModel> {
     //MARK:DECELARTION OF OBJECTS
     var containerView:UIView = {
         var view = UIView()
@@ -59,17 +68,18 @@ class CountryCell: UICollectionViewCell {
     }
     
     //MARK:PUBLIC METHOD(S)
-    public func configureView(model:CountryDetailModel?)
+    
+    override func configure(model:CountryDetailModel)
     {
         self.addSubview(containerView)
         containerView.addSubview(countryImageView)
         containerView.addSubview(titleLable)
         containerView.addSubview(descriptionLable)
         // SET MODEL CONTENT TO LABEL AND IMAGE
-        titleLable.text = model?.title
-        descriptionLable.text = model?.description
+        titleLable.text = model.title
+        descriptionLable.text = model.description
         // CHECK IMAGE IS URL NOT LOADING IMAGE THEN SHOW PLACEHOILDER IMAGE
-        let url = URL(string: model?.imageHref ?? "")
+        let url = URL(string: model.imageHref ?? "")
         countryImageView.kf.indicatorType = .activity
         countryImageView.kf.setImage(with: url) {[weak self] result in
             switch result {
@@ -81,6 +91,7 @@ class CountryCell: UICollectionViewCell {
             }
         }
     }
+   
     //MARK:PRIVATE METHOD(S)
     private  func addConstraint()
     {

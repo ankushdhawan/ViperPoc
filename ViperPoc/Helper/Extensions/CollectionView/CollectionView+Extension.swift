@@ -1,9 +1,9 @@
 //
-//  TableView+Extension.swift
-//  Liscio
+//  CollectionView+Extension.swift
+//  ViperPoc
 //
-//  Created by Ankush Dhawan on 03/11/17.
-//  Copyright © 2017 Ajay Singh Mehra. All rights reserved.
+//  Created by Ankush Dhawan on 3/15/19.
+//  Copyright © 2019 Reliance. All rights reserved.
 //
 
 import Foundation

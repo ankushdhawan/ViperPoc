@@ -15,7 +15,7 @@ class CountryVCTests: XCTestCase {
     
     var controller: CountryVC!
     var collectionView: UICollectionView!
-    var dataSource: CountryDataSource!
+    var dataSource: GenricDataSource<CountryCell, CountryDetailModel>!
     var delegate: UICollectionViewDelegate!
     
     override func setUp() {
@@ -26,10 +26,10 @@ class CountryVCTests: XCTestCase {
         controller.loadViewIfNeeded()
         
         // Check the Table data source is CountryDataSource
-        guard let ds = collectionView.dataSource as? CountryDataSource else {
+        guard let ds = collectionView.dataSource as? GenricDataSource<CountryCell, CountryDetailModel> else {
             return XCTFail("Controller's collectionview view should have a country data source")
         }
-        guard let layout = collectionView.collectionViewLayout as? UICustomCollectionViewLayout else {
+        guard collectionView.collectionViewLayout is UICustomCollectionViewLayout else {
             return XCTFail("Controller's collectionview should have a UICustomCollectionViewLayout")
         }
         

@@ -11,7 +11,7 @@ import XCTest
 @testable import ViperPoc
 
 class CountryDataSourceTests: XCTestCase {
-    var dataSource: CountryDataSource!
+    var dataSource: GenricDataSource<CountryCell, CountryDetailModel>!
     let flowLayout = UICustomCollectionViewLayout()
     
     let collectionView:UICollectionView = {
@@ -26,7 +26,7 @@ class CountryDataSourceTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        dataSource = CountryDataSource()
+        dataSource = GenricDataSource<CountryCell, CountryDetailModel>()
         // Register cell
         flowLayout.numberOfColumns = Constants.isIpad ? 3 : 1
         collectionView.collectionViewLayout = flowLayout
@@ -34,12 +34,12 @@ class CountryDataSourceTests: XCTestCase {
         // Add Dummy data in In the model
         for number in 0..<20 {
             let model = CountryDetailModel(title: "Tile:\(number)", description:"description:\(number)" , imageHref: "url:\(number)")
-            dataSource.countryDtailModels.append(model)
+            dataSource.itemList.append(model)
         }
     }
     
     func testDataSourceHasCountries() {
-        XCTAssertEqual(dataSource.countryDtailModels.count, 20,
+        XCTAssertEqual(dataSource.itemList.count, 20,
                        "DataSource should have correct number of CountryModelArray")
     }
     
